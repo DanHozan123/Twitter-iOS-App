@@ -15,7 +15,7 @@ struct FeedView: View {
                     ForEach(0..<100) { _ in
                         TweetCell()
                     }
-                }.padding()
+                }
                 
             }
             Button(action: {}, label: {

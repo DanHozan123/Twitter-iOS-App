@@ -20,15 +20,13 @@ struct ConversationCell: View {
                 VStack(alignment:.leading, spacing: 4){
                     Text("venom")
                         .font(.system(size: 14, weight: .semibold))
-                    Text("Longer meesage text to see what happens")
+                    Text("Longer meesage text to see what happens / Longer meesage text to see what happens")
                         .font(.system(size: 15))
                         .lineLimit(2)
                     
                 }
                 .foregroundColor(.black)
                 .padding(.trailing)
-                Spacer()
-                
             }
             Divider()
         }

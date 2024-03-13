@@ -17,7 +17,6 @@ struct TweetCell: View {
                     .clipped()
                     .frame(width: 56, height: 56)
                     .clipShape(Circle())
-                    .padding(.leading)
                 
                 VStack (alignment: .leading, spacing: 4) {
                     HStack {
@@ -32,8 +31,6 @@ struct TweetCell: View {
                 }
                 
             }
-            .padding(.bottom)
-            .padding(.trailing)
             
             HStack {
                 
@@ -65,8 +62,7 @@ struct TweetCell: View {
             .foregroundColor(.gray)
             Divider()
             
-        }
-        .padding(.leading, -16)
+        }.padding(5)
     }
 }
 

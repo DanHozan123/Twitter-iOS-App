@@ -11,6 +11,10 @@
 		0E819E522B99E95500303071 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E819E512B99E95500303071 /* ContentView.swift */; };
 		0E819E542B99E95700303071 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E819E532B99E95700303071 /* Assets.xcassets */; };
 		0E819E572B99E95700303071 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E819E562B99E95700303071 /* Preview Assets.xcassets */; };
+		0EB5BAC52BA1BF0300700155 /* UserProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB5BAC42BA1BF0300700155 /* UserProfileView.swift */; };
+		0EB5BAC72BA1BFF300700155 /* ProfileHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB5BAC62BA1BFF300700155 /* ProfileHeaderView.swift */; };
+		0EB5BAC92BA1C00600700155 /* ProfileActionButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB5BAC82BA1C00600700155 /* ProfileActionButtonView.swift */; };
+		0EB5BACB2BA1C01400700155 /* FilterButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB5BACA2BA1C01400700155 /* FilterButtonView.swift */; };
 		0EF564192B99FC010015B1D7 /* FeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF564182B99FC010015B1D7 /* FeedView.swift */; };
 		0EF5641B2B9A03310015B1D7 /* TweetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF5641A2B9A03310015B1D7 /* TweetCell.swift */; };
 		0EF5641D2B9A4BA90015B1D7 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF5641C2B9A4BA90015B1D7 /* SearchView.swift */; };
@@ -23,6 +27,7 @@
 		0EF5642E2B9B511F0015B1D7 /* ChatBubble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF5642D2B9B511F0015B1D7 /* ChatBubble.swift */; };
 		0EF564302B9B53F40015B1D7 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF5642F2B9B53F40015B1D7 /* Message.swift */; };
 		0EF564322B9B573C0015B1D7 /* MessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF564312B9B573C0015B1D7 /* MessageView.swift */; };
+		0EF564342B9B587A0015B1D7 /* NewMessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF564332B9B587A0015B1D7 /* NewMessageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +36,10 @@
 		0E819E512B99E95500303071 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		0E819E532B99E95700303071 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0E819E562B99E95700303071 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		0EB5BAC42BA1BF0300700155 /* UserProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileView.swift; sourceTree = "<group>"; };
+		0EB5BAC62BA1BFF300700155 /* ProfileHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderView.swift; sourceTree = "<group>"; };
+		0EB5BAC82BA1C00600700155 /* ProfileActionButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileActionButtonView.swift; sourceTree = "<group>"; };
+		0EB5BACA2BA1C01400700155 /* FilterButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterButtonView.swift; sourceTree = "<group>"; };
 		0EF564182B99FC010015B1D7 /* FeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedView.swift; sourceTree = "<group>"; };
 		0EF5641A2B9A03310015B1D7 /* TweetCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetCell.swift; sourceTree = "<group>"; };
 		0EF5641C2B9A4BA90015B1D7 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
@@ -43,6 +52,7 @@
 		0EF5642D2B9B511F0015B1D7 /* ChatBubble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatBubble.swift; sourceTree = "<group>"; };
 		0EF5642F2B9B53F40015B1D7 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Message.swift; path = Twitter/View/Messages/Message.swift; sourceTree = SOURCE_ROOT; };
 		0EF564312B9B573C0015B1D7 /* MessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageView.swift; sourceTree = "<group>"; };
+		0EF564332B9B587A0015B1D7 /* NewMessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewMessageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,9 +110,21 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		0EB5BAC32BA1BEF200700155 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				0EB5BAC42BA1BF0300700155 /* UserProfileView.swift */,
+				0EB5BAC62BA1BFF300700155 /* ProfileHeaderView.swift */,
+				0EB5BAC82BA1C00600700155 /* ProfileActionButtonView.swift */,
+				0EB5BACA2BA1C01400700155 /* FilterButtonView.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
 		0EF564162B99FBB40015B1D7 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				0EB5BAC32BA1BEF200700155 /* Profile */,
 				0EF564222B9B36650015B1D7 /* Messages */,
 				0E819E512B99E95500303071 /* ContentView.swift */,
 				0EF564182B99FC010015B1D7 /* FeedView.swift */,
@@ -132,6 +154,7 @@
 				0EF564292B9B43B40015B1D7 /* ChatView.swift */,
 				0EF5642D2B9B511F0015B1D7 /* ChatBubble.swift */,
 				0EF564312B9B573C0015B1D7 /* MessageView.swift */,
+				0EF564332B9B587A0015B1D7 /* NewMessageView.swift */,
 			);
 			path = Messages;
 			sourceTree = "<group>";
@@ -210,13 +233,18 @@
 				0E819E522B99E95500303071 /* ContentView.swift in Sources */,
 				0EF564192B99FC010015B1D7 /* FeedView.swift in Sources */,
 				0EF564242B9B36750015B1D7 /* ConversationsView.swift in Sources */,
+				0EB5BAC72BA1BFF300700155 /* ProfileHeaderView.swift in Sources */,
 				0EF5642A2B9B43B40015B1D7 /* ChatView.swift in Sources */,
 				0EF564282B9B42CD0015B1D7 /* MessageInputView.swift in Sources */,
+				0EB5BACB2BA1C01400700155 /* FilterButtonView.swift in Sources */,
 				0E819E502B99E95500303071 /* TwitterApp.swift in Sources */,
 				0EF5642E2B9B511F0015B1D7 /* ChatBubble.swift in Sources */,
 				0EF5641B2B9A03310015B1D7 /* TweetCell.swift in Sources */,
+				0EF564342B9B587A0015B1D7 /* NewMessageView.swift in Sources */,
 				0EF564302B9B53F40015B1D7 /* Message.swift in Sources */,
+				0EB5BAC52BA1BF0300700155 /* UserProfileView.swift in Sources */,
 				0EF5641F2B9A4C410015B1D7 /* SearchBar.swift in Sources */,
+				0EB5BAC92BA1C00600700155 /* ProfileActionButtonView.swift in Sources */,
 				0EF564212B9B322A0015B1D7 /* UserCell.swift in Sources */,
 				0EF564322B9B573C0015B1D7 /* MessageView.swift in Sources */,
 				0EF564262B9B36870015B1D7 /* ConversationCell.swift in Sources */,
@@ -356,6 +384,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -385,6 +414,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -16,14 +16,15 @@ struct UserCell: View {
                 .clipped()
                 .frame(width: 56, height: 56)
                 .cornerRadius(28)
-            VStack(alignment: .leading){
+            VStack(alignment: .leading, spacing: 4){
                 Text("venom")
                     .font(.system(size: 14, weight: .semibold))
                 Text("Eddie Brock")
                     .font(.system(size: 14))
                 
             }
-            HStack { Spacer() }
+            .foregroundColor(.black)
+            Spacer()
         }.padding(5)
     }
 }
