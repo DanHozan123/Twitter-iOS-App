@@ -16,7 +16,6 @@ struct ConversationsView: View {
             
             NavigationLink(destination: ChatView(), isActive: $showChat, label:  {} )
             
-            
             ScrollView {
                 VStack{
                     ForEach(0..<20) { _ in
@@ -30,6 +29,7 @@ struct ConversationsView: View {
                 }.padding()
                 
             }
+            
             Button(action: {self.isShowingNewMessageView.toggle()}, label: {
                 Image(systemName: "envelope")
                     .resizable()
