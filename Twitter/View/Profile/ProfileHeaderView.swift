@@ -6,11 +6,16 @@
 //
 
 import SwiftUI
+import Kingfisher
 
 struct ProfileHeaderView: View {
+    @State var selectedFilter: TweetFilterOptions = .tweets
+    @Binding var isFollowed: Bool
+    let viewModel: ProfileViewModel
+    
     var body: some View {
         VStack {
-            Image("batman")
+            KFImage(URL(string: viewModel.user.profileImageUrl))
                 .resizable()
                 .scaledToFill()
                 .clipped()
@@ -18,11 +23,11 @@ struct ProfileHeaderView: View {
                 .cornerRadius(60)
                 .shadow(radius: 10)
                 
-            Text("Bruce Wayne")
+            Text(viewModel.user.fullname)
                 .font(.system(size: 16, weight: .semibold))
                 .padding(.top, 8)
             
-            Text("@batman")
+            Text("@\(viewModel.user.username)")
                 .font(.subheadline)
                 .foregroundColor(.gray)
             Text("Billionaire by day, dark knight by night")
@@ -46,15 +51,10 @@ struct ProfileHeaderView: View {
             }
             .padding()
             
-            ProfileActionButtonView(isCurrentUser: false)
-            
+            ProfileActionButtonView(viewModel: viewModel, isFollowed: $isFollowed)
+            FilterButtonView(selectedOption: $selectedFilter)
+
             Spacer()
         }
-    }
-}
-
-struct ProfileHeaderView_Previews: PreviewProvider {
-    static var previews: some View {
-        ProfileHeaderView()
     }
 }

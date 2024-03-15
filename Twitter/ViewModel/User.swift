@@ -17,7 +17,7 @@ struct User: Identifiable {
     //var bio: String?
     
     //var isFollowed = false
-    //var isCurrentUser: Bool { return Auth.auth().currentUser?.uid == self.id }
+    var isCurrentUser: Bool { return Auth.auth().currentUser?.uid == self.id }
     
     init(dictionary: [String: Any]) {
         self.id = dictionary["uid"] as? String ?? ""
