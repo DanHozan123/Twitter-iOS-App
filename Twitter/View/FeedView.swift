@@ -8,31 +8,30 @@
 import SwiftUI
 
 struct FeedView: View {
-    @EnvironmentObject var viewModel: AuthViewModel
-
     @State var isShowingNewTweetView = false
+    @ObservedObject var viewModel = FeedViewModel()
+ 
+  
     var body: some View {
         ZStack(alignment: .bottomTrailing) {
             ScrollView {
-                VStack{
-                    ForEach(0..<100) { _ in
-                        TweetCell()
+                LazyVStack{
+                    ForEach(viewModel.tweets) { tweet in
+                        NavigationLink(destination: TweetDetailView(tweet: tweet), label: {
+                            TweetCell(tweet: tweet)
+                        })
                     }
                 }
                 
+                
             }
-            Button(
-                action: {
-                    //isShowingNewTweetView.toggle()
-                    viewModel.signOut()
-
-                }, label: {
-                    Image("tweet")
-                        .resizable()
-                        .renderingMode(.template)
-                        .frame(width: 32, height: 32)
-                        .padding()
-                })
+            Button(action: { isShowingNewTweetView.toggle() }, label: {
+                Image("tweet")
+                    .resizable()
+                    .renderingMode(.template)
+                    .frame(width: 32, height: 32)
+                    .padding()
+            })
             .background(Color(.systemBlue))
             .foregroundColor(.white)
             .clipShape(Circle())

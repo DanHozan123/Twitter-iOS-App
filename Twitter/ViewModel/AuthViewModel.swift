@@ -18,6 +18,8 @@ class AuthViewModel: ObservableObject {
     @Published var error: Error?
     @Published var user: User?
     
+    static let shared = AuthViewModel()
+    
     init () {
         userSession = Auth.auth().currentUser
         fetchUser()
@@ -29,6 +31,7 @@ class AuthViewModel: ObservableObject {
                 print("ERROR: ", error.localizedDescription)
             }
             self.userSession = result?.user
+            self.fetchUser()
         }
     }
     
@@ -64,6 +67,7 @@ class AuthViewModel: ObservableObject {
                             print("ERROR: ", error.localizedDescription)
                         }
                         self.userSession = user
+                        self.fetchUser()
                     }
                 }
             }
@@ -73,14 +77,15 @@ class AuthViewModel: ObservableObject {
     
     func signOut() {
         userSession = nil
+        user = nil
         try? Auth.auth().signOut()
     }
     
     func fetchUser() {
         guard let uid = userSession?.uid else { return }
         COLLECTION_USERS.document(uid).getDocument { snapshot, _ in
-            guard let data = snapshot?.data() else { return }
-            let user = User(dictionary: data)
+            guard let dictionary = snapshot?.data() else { return }
+            self.user = User(dictionary: dictionary)
         }
     }
 }
