@@ -9,14 +9,15 @@ import SwiftUI
 
 struct SearchView: View {
     @State var searchText = ""
-    @ObservedObject var viewModel = SearchViewModel()
+    @ObservedObject var viewModel = SearchViewModel(cofing: .search)
     
     var body: some View {
         ScrollView {
             SearchBar(text: $searchText)
                 .padding()
+            
             VStack(alignment: .leading) {
-                ForEach(viewModel.users) { user in
+                ForEach(searchText.isEmpty ? viewModel.users : viewModel.filteredUsers(searchText)) { user in
                     NavigationLink(
                         destination: LazyView(UserProfileView(user: user)),
                         label: {
