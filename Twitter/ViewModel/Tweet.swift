@@ -16,7 +16,7 @@ struct Tweet: Identifiable {
     let likes: Int
     let uid: String
     let timestamp: Timestamp
-    //var replyingTo: String?
+    
         
     init(dictionary: [String: Any]) {
         self.id = dictionary["id"] as? String ?? ""
@@ -27,7 +27,6 @@ struct Tweet: Identifiable {
         self.likes = dictionary["likes"] as? Int ?? 0
         self.uid = dictionary["uid"] as? String ?? ""
         self.timestamp = dictionary["timestamp"] as? Timestamp ?? Timestamp(date: Date())
-        //self.replyingTo = dictionary["replyingTo"] as? String
     }
     
     var timestampString: String {

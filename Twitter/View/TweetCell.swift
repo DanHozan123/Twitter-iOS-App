@@ -37,6 +37,7 @@ struct TweetCell: View {
                     
                     Text(tweet.caption)
                         .foregroundColor(.black)
+                        .multilineTextAlignment(.leading)
                 }
             }
             .padding(.bottom)
